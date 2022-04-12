@@ -34,7 +34,7 @@ const hideError = () => {
 };
 
 
-const domoDelete = async (url, data, handler) => {
+const bookDelete = async (url, data, handler) => {
   const response = await fetch(url, {
     method: 'DELETE',
     headers: {
@@ -63,5 +63,5 @@ module.exports = {
     handleError,
     sendPost,
     hideError,
-    domoDelete,
+    bookDelete,
 };

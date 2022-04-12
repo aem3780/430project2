@@ -17,7 +17,7 @@ html, body {
 nav {
     width: 100%;
     height: 50px;
-    background-color: #55acee;
+    background-color: #87c5cc;
 }
 
 nav:nth-child(1) {
@@ -38,22 +38,22 @@ nav:nth-child(1) {
     text-decoration: none;
     padding: 5px;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: #87c5cc;
     transition: background-color 0.4s ease;
 }
 
 .navlink a:hover {
     transition: background-color 0.8s ease;
-    background-color: #66bdff;
+    background-color: #87c5cc;
 }
 
-.domoForm {
+.bookForm {
     align-items: center;
-    border: 2px solid #338acc;
+    border: 2px solid #87c5cc;
     width: 100%;
     margin-top:0px;
     padding-top:10px;
-    background-color: #55acee;
+    background-color: #87c5cc;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     justify-content: flex-start;
@@ -63,7 +63,7 @@ nav:nth-child(1) {
     height: 50px;
 }
 
-.domoForm label {
+.bookForm label {
     display: inline-block;
     width: auto;
     margin-left: 10px;
@@ -72,28 +72,28 @@ nav:nth-child(1) {
     margin-right: 10px;
 }
 
-.domoForm input[type=number] {
+.bookForm input[type=number] {
     width: 60px;
 }
 
-.makeDomoSubmit {
+.makeBookSubmit {
     transition: background-color 0.4s ease;
     display: inline;
     width: 90px;
-    background-color: #55acee;
+    background-color: #87c5cc;
     border-radius: 2px;
     color: white;
     text-decoration: none;
     margin: 10px;
 }
 
-.makeDomoSubmit:link, .makeDomoSubmit:visited, .makeDomoSubmit:hover, .makeDomoSubmit:active {
+.makeBookSubmit:link, .makeBookSubmit:visited, .makeBookSubmit:hover, .makeBookSubmit:active {
     color: white;
 }
 
-.makeDomoSubmit:hover {
+.makeBookSubmit:hover {
     transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #87c5cc;
 }
 
 .mainForm {
@@ -124,9 +124,9 @@ nav:nth-child(1) {
     margin-top: 14px;
     font-size: 1.2em;
     width: 100px;
-    background-color: #55acee;
+    background-color: #87c5cc;
     border-radius: 2px;
-    border-color: #66acee;
+    border-color: #87c5cc;
     padding: 3px 0px;
     color: white;
     text-decoration: none;
@@ -138,7 +138,7 @@ nav:nth-child(1) {
 
 .formSubmit:hover {
     transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #87c5cc;
 }
 
 #user, #pass, #pass2 {
@@ -150,7 +150,7 @@ nav:nth-child(1) {
 
 #user:focus, #pass:focus, #pass2:focus {
     outline: none;
-    box-shadow: 0px 0px 1px 1px #55acee;
+    box-shadow: 0px 0px 1px 1px #87c5cc;
 }
 
 .hidden {
@@ -183,11 +183,11 @@ nav:nth-child(1) {
 #errorMessage {
     font-size: 1.2em;
     font-weight: bold;
-    color: red;
+    color: #ca4637;
     font-style: italic;
 }
 
-#domo {
+#book {
     z-index: 225;
     margin-top: -20px;
     margin-left: 135px;
@@ -198,17 +198,17 @@ nav:nth-child(1) {
     transform: rotate(330deg);
 }
 
-#domos {
+#books {
     width: 40%;
     min-width: 500px;
-    border: 2px solid #55acee;
+    border: 2px solid #87c5cc;
     border-radius: 4px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.domoFlex {
+.bookFlex {
     align-items: center;
     display: flex;
     align-items: center;
@@ -218,33 +218,27 @@ nav:nth-child(1) {
 
 }
 
-.domo {
+.book {
     width: 95%;
     margin: 0 auto;
     margin-top: 2px;
     margin-bottom: 2px;
-    border: 2px solid #55acee;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: white;
     padding: 10px;
     height: auto;
     position: relative;
 }
 
-.domo:hover {
+.book:hover {
     transition: border-color 0.2s ease-out;
     border-color: rgba(255,255,255, 0.8);
     transition: background-color 2.6s ease-out;
-    background-color: #66bfff;
+    background-color: #87c5cc;;
 }
 
-img.domoFace {
-    height: 50px;
-    width: 50px;
-    border-radius: 4px;
-}
 
-h3.emptyDomo {
+h3.emptyBook {
     width: 300px;
     font-size: 1.5em;
     margin: 0 auto;
@@ -252,7 +246,7 @@ h3.emptyDomo {
     margin-top: 18px;
 }
 
-h3.domoName {
+h3.bookTitle {
     font-weight: bold;
     padding-left: 10px;
     font-size: 1.2em;
@@ -260,14 +254,14 @@ h3.domoName {
     padding: 10px;
 }
 
-h3.domoAge {
+h3.bookAuthor {
     font-weight: bold;
     padding: 10px;
     font-size: 1.2em;
     width: auto;
 }
 
-h3.domoHeight {
+h3.bookPages {
     float:left;
     text-align: left;
     width: auto;
@@ -276,11 +270,11 @@ h3.domoHeight {
     font-size: 1.2em;
 }
 
-.domo:first-child {
+.book:first-child {
     margin-top: 10px;
 }
 
-.domo:last-child {
+.book:last-child {
     margin-bottom:10px;
 }
 
