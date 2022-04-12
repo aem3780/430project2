@@ -71,7 +71,7 @@ const DomoList = (props) => {
         return (
             <div key={domo._id} className="domo">
                 <div className="domoFlex">
-                     <img src="/assets/img/domoface.jpeg" alt="domo face" className="domoFace" />
+                     <img src="/assets/img/bookicon.png" alt="domo face" className="domoFace" />
                      <img id="domoDelete" href="/deleteDomo" data-name={domo.name} onClick={handleDelete} src="/assets/img/trashcan.png" alt="trash can" className="trash" />
                      <h3 className="domoName"> Name: {domo.name} </h3>
                      <h3 className="domoAge"> Age: {domo.age} </h3>
