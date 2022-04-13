@@ -53,7 +53,7 @@ const getBooks = (req, res) => BookModel.findByOwner(req.session.account._id, (e
     console.log(err);
     return res.status(400).json({ error: 'An error occurred!' });
   }
-  return res.json({ domos: docs });
+  return res.json({ books: docs });
 });
 
 module.exports = {

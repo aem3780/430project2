@@ -5,6 +5,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     font-family: sans-serif;
+    color: #677ab9;
 }
 
 #logo {
@@ -75,6 +76,15 @@ nav:nth-child(1) {
 
 .bookForm input[type=number] {
     width: 60px;
+}
+.bookForm input{
+    border-radius: 5px;
+    border-color: #677ab9;
+}
+
+.bookForm select{
+    border-radius: 5px;
+    border-color: #677ab9;
 }
 
 .makeBookSubmit {
@@ -156,6 +166,11 @@ nav:nth-child(1) {
 
 .hidden {
     display: none;
+}
+img.bookIcon {
+    height: 50px;
+    width: 50px;
+    border-radius: 4px;
 }
 
 #domoMessage {
