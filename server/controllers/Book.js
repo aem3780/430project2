@@ -6,7 +6,7 @@ const { Book } = models;
 const makerPage = (req, res) => res.render('app');
 
 const makeBook = async (req, res) => {
-  if (!req.body.title || !req.body.author || !req.body.pages) {
+  if (!req.body.title || !req.body.author || !req.body.pages || !req.body.genre ) {
     return res.status(400).json({ error: 'All fields are required!' });
   }
 
@@ -14,13 +14,14 @@ const makeBook = async (req, res) => {
     title: req.body.title,
     author: req.body.author,
     pages: req.body.pages,
+    genre: req.body.genre,
     owner: req.session.account._id,
   };
 
   try {
     const newBook = new Book(bookData);
     await newBook.save();
-    return res.status(201).json({ title: newBook.title, author: newBook.author, pages: newBook.pages });
+    return res.status(201).json({ title: newBook.title, author: newBook.author, pages: newBook.pages, genre: newBook.genre });
   } catch (err) {
     console.log(err);
     if (err.code === 11000) {

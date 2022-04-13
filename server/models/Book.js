@@ -17,6 +17,11 @@ const BookSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  genre: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   owner: {
     type: mongoose.Schema.ObjectId,
     required: true,
@@ -38,13 +43,14 @@ BookSchema.statics.toAPI = (doc) => ({
   title: doc.title,
   author: doc.author,
   pages: doc.pages,
+  genre: doc.genre,
 });
 
 BookSchema.statics.findByOwner = (ownerId, callback) => {
   const search = {
     owner: mongoose.Types.ObjectId(ownerId),
   };
-  return BookModel.find(search).select('title author pages').lean().exec(callback);
+  return BookModel.find(search).select('title author pages genre').lean().exec(callback);
 };
 
 BookSchema.statics.deleteByOwner = (ownerId, title, callback) => {
@@ -52,7 +58,7 @@ BookSchema.statics.deleteByOwner = (ownerId, title, callback) => {
     owner: mongoose.Types.ObjectId(ownerId),
     title,
   };
-  return BookModel.deleteOne(search).select('title author pages').lean().exec(callback);
+  return BookModel.deleteOne(search).select('title author pages genre').lean().exec(callback);
 };
 
 BookModel = mongoose.model('Book', BookSchema);
