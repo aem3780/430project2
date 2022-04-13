@@ -94,7 +94,7 @@ const BookForm = (props) => {
             </select>
             </div>
             <input id="_csrf" type="hidden" name="_csrf" value={props.csrf} />
-            <input className="makeBookSubmit" type="submit" value="Make Book" />
+            <input className="makeBookSubmit" type="submit" value="Add Book" />
         </form>
     );
 };
