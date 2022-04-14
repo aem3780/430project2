@@ -7,6 +7,8 @@ html, body {
     overflow-x: hidden;
     color: #677ab9;
     font-family: 'Special Elite', cursive;
+    background-image: url('img/background.jpg');
+    background-position: center;
     
 }
 
@@ -88,14 +90,13 @@ nav:nth-child(1) {
 .bookForm input{
     border-radius: 4px;
     border-width: 1px;
-    border-color: #677ab9;
+    border-color: white
     
 }
 
-
 .bookForm select{
     border-radius:4px;
-    border-color: #677ab9;
+    border-color: white;
     border-width: 1px;
 }
 
@@ -234,7 +235,7 @@ img.bookIcon {
 }
 
 #books {
-    width: 40%;
+    width: 55%;
     min-width: 500px;
     border: 2px solid #87c5cc;
     border-radius: 4px;
@@ -260,7 +261,7 @@ img.bookIcon {
     margin-bottom: 2px;
     border-radius: 4px;
     background-color: white;
-    padding: 10px;
+    padding: 5px;
     height: auto;
     position: relative;
 }
@@ -269,7 +270,8 @@ img.bookIcon {
     transition: border-color 0.2s ease-out;
     border-color: rgba(255,255,255, 0.8);
     transition: background-color 2.6s ease-out;
-    background-color: #87c5cc;;
+    background-color: lightpink;
+    color: white;
 }
 
 
@@ -286,12 +288,12 @@ h3.bookTitle {
     padding-left: 10px;
     font-size: 1.2em;
     width: auto;
-    padding: 10px;
+    padding: 5px;
 }
 
 h3.bookAuthor {
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
     font-size: 1.2em;
     width: auto;
 }
@@ -301,7 +303,7 @@ h3.bookPages {
     text-align: left;
     width: auto;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
     font-size: 1.2em;
 }
 

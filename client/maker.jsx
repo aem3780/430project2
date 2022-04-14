@@ -112,12 +112,12 @@ const BookList = (props) => {
         return (
             <div key={book._id} className="book">
                 <div className="bookFlex">
-                     <img src="/assets/img/bookicon.png" alt="book icon" className="bookIcon" />
-                     <img id="bookDelete" href="/deleteBook" data-title={book.title} onClick={handleDelete} src="/assets/img/trashcan.png" alt="trash can" className="trash" />
+                     <img src="/assets/img/bookicon.png" alt="book icon" className="bookIcon" /> 
                      <h3 className="bookTitle"> Title: {book.title} </h3>
                      <h3 className="bookAuthor"> Author: {book.author} </h3>
                      <h3 className="bookPages"> Pages: {book.pages} </h3>
                      <h3 className="bookGenre"> Genre: {book.genre} </h3>
+                     <input className="finishedBook" type="submit" value="Finished Book" />
                  </div>
              </div>
            
