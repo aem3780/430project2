@@ -6,7 +6,7 @@ const { Book } = models;
 const makerPage = (req, res) => res.render('app');
 
 const makeBook = async (req, res) => {
-  if (!req.body.title || !req.body.author || !req.body.pages || !req.body.genre ) {
+  if (!req.body.title || !req.body.author || !req.body.pages || !req.body.genre) {
     return res.status(400).json({ error: 'All fields are required!' });
   }
 

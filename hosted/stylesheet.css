@@ -1,5 +1,5 @@
-
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -9,8 +9,9 @@ html, body {
     font-family: 'Special Elite', cursive;
     background-image: url('img/background.jpg');
     background-position: center;
-    
+
 }
+
 #errorMessage {
     font-size: 1.2em;
     font-weight: bold;
@@ -19,21 +20,23 @@ html, body {
     display: block;
     text-align: center;
 }
+
 .bookForm {
     text-align: center;
     align-items: center;
     border: 2px solid #87c5cc;
     width: 100%;
-    margin-top:0px;
+    margin-top: 0px;
     background-color: #87c5cc;
-    justify-content:center;
+    justify-content: center;
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     height: 60px;
-    
+
 }
-.bookList{
+
+.bookList {
     padding: 20px;
 }
 
@@ -42,6 +45,7 @@ img.bookIcon {
     width: 50px;
     border-radius: 4px;
 }
+
 #books {
     width: 55%;
     min-width: 500px;
@@ -61,16 +65,18 @@ img.bookIcon {
     margin-right: 10px;
 }
 
-h1,h2{
+h1,
+h2 {
     display: block;
     text-align: center;
     margin: 0 auto;
     padding: 20px;
     font-size: 50px;
-    color:#87c5cc;
+    color: #87c5cc;
     font-family: 'Special Elite', cursive;
 }
-h2{
+
+h2 {
     font-size: large;
     color: #677ab9;
     padding: 0;
@@ -89,25 +95,31 @@ h2{
     text-decoration: none;
     font-family: 'Special Elite', cursive;
 }
+
 .makeBookSubmit:hover {
     transition: background-color 0.4s ease;
     color: white;
     background-color: #677ab9;
 }
 
-.makeBookSubmit:link, .makeBookSubmit:visited, .makeBookSubmit:hover, .makeBookSubmit:active {
+.makeBookSubmit:link,
+.makeBookSubmit:visited,
+.makeBookSubmit:hover,
+.makeBookSubmit:active {
     color: white;
     font-family: 'Special Elite', cursive;
 }
 
 
-.bookForm input, select{
+.bookForm input,
+select {
     border-radius: 4px;
     border-width: 1px;
     border-color: white;
     padding: 5px;
-    
+
 }
+
 nav {
     padding-top: 20px;
     width: 100%;
@@ -124,29 +136,33 @@ nav {
     font-size: 1.3em;
 }
 
-.navlink a, .navlink a:link, .navlink a:visited, .navlink a:hover, .navlink a:active {
+.navlink a,
+.navlink a:link,
+.navlink a:visited,
+.navlink a:hover,
+.navlink a:active {
     color: white;
     padding: 5px;
     text-decoration: none;
     background-color: #87c5cc;
     transition: background-color 0.4s ease;
-    
+
 }
 
 .navlink a:hover {
     transition: background-color 0.8s ease;
-    color:#677ab9;
+    color: #677ab9;
 }
 
-#logo{
+#logo {
     height: 40px;
     width: 40px;
     padding-left: 20px;
-    float:left;
+    float: left;
     background-color: #87c5cc;
 }
 
-#logoText{
+#logoText {
     color: white;
     padding: 20px;
     text-decoration: none;
@@ -168,7 +184,7 @@ nav {
     font-size: 1.2em;
 }
 
-.mainForm input{
+.mainForm input {
     margin: 10px
 }
 
@@ -185,12 +201,17 @@ nav {
     font-family: 'Special Elite', cursive;
 }
 
-.formSubmit:link, .formSubmit:visited, .formSubmit:hover, .formSubmit:active {
+.formSubmit:link,
+.formSubmit:visited,
+.formSubmit:hover,
+.formSubmit:active {
     color: white;
     font-family: 'Special Elite', cursive;
 }
 
-#user, #pass, #pass2 {
+#user,
+#pass,
+#pass2 {
     text-align: center;
     font-size: .8em;
     border-radius: 4px;
@@ -206,9 +227,10 @@ nav {
     justify-content: space-between;
 
 }
-.bookFlex h3{
+
+.bookFlex h3 {
     padding: 10px;
-    
+
 }
 
 .book {
@@ -220,7 +242,7 @@ nav {
     padding: 5px;
 }
 
-.finishedBook{
+.finishedBook {
     text-align: center;
     background-color: lightpink;
     border-radius: 2px;
@@ -233,7 +255,7 @@ nav {
 
 .book:hover {
     transition: border-color 0.2s ease-out;
-    border-color: rgba(255,255,255, 0.8);
+    border-color: rgba(255, 255, 255, 0.8);
     transition: background-color 2.6s ease-out;
     background-color: lightgray;
 }
