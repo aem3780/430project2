@@ -16,7 +16,7 @@ const router = require('./router.js');
 
 const port = process.env.PORT || process.env.NODE_PORT || 3000;
 
-const dbURI = process.env.MONGODB_URI || 'mongodb+srv://alliemaus:June1301Pepper13@cluster0.damx6.mongodb.net/maus-domo-maker?';
+const dbURI = process.env.MONGODB_URI || 'mongodb+srv://alliemaus:June1301Pepper13@cluster0.damx6.mongodb.net/maus-project2-final?';
 mongoose.connect(dbURI, (err) => {
   if (err) {
     console.log('Could not connect to database');
