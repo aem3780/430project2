@@ -61,6 +61,8 @@ const LoginWindow = (props) => {
     );
 };
 
+
+
 const SignupWindow = (props) => {
     return (
         <form id="signupForm"
@@ -102,6 +104,7 @@ const init = async () => {
             document.getElementById('content'));
         return false;
     });
+
 
     ReactDOM.render(<LoginWindow csrf={data.csrfToken} />,
         document.getElementById('content'));
