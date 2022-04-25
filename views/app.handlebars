@@ -8,26 +8,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="/assets/img/favicon.jpg"/>
-  <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css"/>
 </head>
-<body>
-  <nav><a href="/login"><img id="logo" src="/assets/img/bookstack.png" alt="stack logo"/></a>
+  <nav>
+    <a id="logoText" href="/login"><img id="logo" src="/assets/img/bookstack.png" alt="stack logo"/>Bookshelf</a></div>
     <div class="navlink"><a href="/logout">Log out</a></div>
     <div class="navlink">Info</div>
     <div class="navlink">Documentation</div>
   </nav>
-
+<body>
   <section id="makeBook">
 
   </section>
+    <div id="domoMessage" class='hidden'>
+    <h3><span id="errorMessage"></span></h3>
+  </div>
   <section id="books">
     
   </section>
 
-  <div id="domoMessage" class='hidden'>
-    <img id="speech" src="/assets/img/speech.png" alt="speech box"/>
-    <h3><span id="errorMessage"></span></h3>
-  </div>
   <script src="/assets/appbundle.js"></script>
 </body>
 </html>

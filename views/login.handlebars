@@ -8,27 +8,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="/assets/img/favicon.jpg"/>
-  <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheet.css"/>
 </head>
-<body> 
-  <nav><a href="/login"><img id="logo" src="/assets/img/bookstack.png" alt="stack logo"/></a>
+  <nav>
+    <a id="logoText" href="/login"><img id="logo" src="/assets/img/bookstack.png" alt="stack logo"/>Bookshelf</a></div>
     <div class="navlink"><a id="loginButton" href="/login">Login</a></div>
     <div class="navlink"><a id="signupButton" href="/signup">Sign up</a></div>
     <div class="navlink">Info</div>
     <div class="navlink">Documentation</div>
   </nav>
-
+<body> 
   <h1>Welcome to Bookshelf</h1>
   <h2>You can create your own bookshelf and keep track of what you've read!</h2>
 
+  <div id="domoMessage" class='hidden'>
+    <h3><span id="errorMessage"></span></h3>
+  </div>
+  
   <section id="content">
 
   </section>
 
-  <div id="domoMessage" class='hidden'>
-    <img id="speech" src="/assets/img/speech.png" alt="speech box"/>
-    <h3><span id="errorMessage"></span></h3>
-  </div>
   <script src="/assets/loginbundle.js"></script>
 </body>
 </html>
