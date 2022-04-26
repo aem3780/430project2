@@ -31,22 +31,8 @@ const makeBook = async (req, res) => {
   }
 };
 
-const deleteBook = (req, res) => {
-  if (!req.body.title) {
-    return res.status(400).json({ error: 'Title is required! ' });
-  }
 
-  BookModel.deleteByOwner(req.session.account._id, req.body.title, (err) => {
-    if (err) {
-      console.log(err);
-      return res.status(400).json({ error: 'An error occurred!' });
-    }
 
-    return res.sendStatus(204);
-  });
-
-  return false;
-};
 
 const getBooks = (req, res) => BookModel.findByOwner(req.session.account._id, (err, docs) => {
   if (err) {
@@ -60,5 +46,4 @@ module.exports = {
   makerPage,
   makeBook,
   getBooks,
-  deleteBook,
 };

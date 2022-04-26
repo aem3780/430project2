@@ -1,6 +1,6 @@
 const helper = require('./helper.js');
 
-const handleBook = (e) => {
+const handleReview = (e) => {
     e.preventDefault();
     helper.hideError();
 
@@ -8,26 +8,29 @@ const handleBook = (e) => {
     const author = e.target.querySelector('#bookAuthor').value;
     const pages = e.target.querySelector('#bookPages').value;
     const genre = e.target.querySelector('#bookGenre').value;
+    const rating = e.target.querySelector('#bookRating').value;
+    const review = e.target.querySelector('#bookReviewText').value;
     const _csrf = e.target.querySelector('#_csrf').value;
 
-    if (!title || !author || !pages) {
+    if (!title || !author || !pages ||!genre ||!rating) {
         helper.handleError('All fields are required!');
         return false;
     }
 
-    helper.sendPost(e.target.action, { title, author, pages, genre, _csrf }, loadBooksFromServer);
+    helper.sendPost(e.target.action, { title, author, pages, genre, rating, review, _csrf }, loadReviewsFromServer);
 
     return false;
 };
 
-const BookForm = (props) => {
+
+const ReviewForm = (props) => {
     return (
-        <form id="bookForm"
-            onSubmit={handleBook}
-            name="bookForm"
-            action="/maker"
+        <form id="reviewForm"
+            onSubmit={handleReview}
+            name="reviewForm"
+            action="/review"
             method="POST"
-            className="bookForm"
+            className="reviewForm"
         >
             <div>
                 <label htmlFor="title">Title: </label>
@@ -81,31 +84,47 @@ const BookForm = (props) => {
                     <option>Young Adult</option>
                 </select>
             </div>
+            <div>
+                <label htmlFor="rating">Rating: </label>
+                <select id="bookRating" name='rating'>
+                    <option>★★★★★</option>
+                    <option>★★★★</option>
+                    <option>★★★</option>
+                    <option>★★</option>
+                    <option>★</option>
+                    <option>None</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="reviewText">Leave a review: </label>
+                <input id="bookReviewText" type="text" name="reviewText" placeholder="Your review..." />
+            </div>
             <input id="_csrf" type="hidden" name="_csrf" value={props.csrf} />
-            <input className="makeBookSubmit" type="submit" value="Add Book" />
+            <input className="makeReviewSubmit" type="submit" value="Publish Review" />
         </form>
     );
 };
 
-const BookList = (props) => {
-    if (props.books.length === 0) {
+const reviewList = (props) => {
+    if (props.reviews.length === 0) {
         return (
-            <div className="bookList">
-                <h3 className="emptyBook">No Books Yet!</h3>
+            <div className="reviewList">
+                <h3 className="emptyReviewList">No Reviews Yet!</h3>
             </div>
         );
     }
 
-    const bookNodes = props.books.map(book => {
+    const reviewNodes = props.review.map(review => {
         return (
-            <div key={book._id} className="book">
-                <div className="bookFlex">
+            <div key={review._id} className="review">
+                <div className="reviewFlex">
                     <img src="/assets/img/bookicon.png" alt="book icon" className="bookIcon" />
-                    <h3 className="bookTitle"> Title: {book.title} </h3>
-                    <h3 className="bookAuthor"> Author: {book.author} </h3>
-                    <h3 className="bookPages"> Pages: {book.pages} </h3>
-                    <h3 className="bookGenre"> Genre: {book.genre} </h3>
-                    <input className="finishedBook" type="submit" value="Finished Book" />
+                    <h3 className="bookTitle"> Title: {review.title} </h3>
+                    <h3 className="bookAuthor"> Author: {review.author} </h3>
+                    <h3 className="bookPages"> Pages: {review.pages} </h3>
+                    <h3 className="bookGenre"> Genre: {review.genre} </h3>
+                    <h3 className="bookRating"> Rating: {review.rating} </h3>
+                    <h3 className="bookReviewText"> Review: {review.review} </h3>
                 </div>
             </div>
 
@@ -113,18 +132,18 @@ const BookList = (props) => {
     });
 
     return (
-        <div className="bookList">
-            {bookNodes}
+        <div className="reviewList">
+            {reviewNodes}
         </div>
     );
 };
 
-const loadBooksFromServer = async () => {
-    const response = await fetch('/getBooks');
+const loadReviewsFromServer = async () => {
+    const response = await fetch('/getReviews');
     const data = await response.json();
     ReactDOM.render(
-        <BookList books={data.books} />,
-        document.getElementById('books')
+        <ReviewList reviews={data.reviews} />,
+        document.getElementById('reviews')
     );
 };
 
@@ -133,16 +152,16 @@ const init = async () => {
     const data = await response.json();
 
     ReactDOM.render(
-        <BookForm csrf={data.csrfToken} />,
-        document.getElementById('makeBook')
+        <ReviewForm csrf={data.csrfToken} />,
+        document.getElementById('makeReview')
     );
 
     ReactDOM.render(
-        <BookList books={[]} />,
-        document.getElementById('books')
+        <ReviewList reviews={[]} />,
+        document.getElementById('reviews')
     );
 
-    loadBooksFromServer();
+    loadReviewsFromServer();
 };
 
 window.onload = init;

@@ -2,13 +2,7 @@ const helper = require('./helper.js');
 
 const Info = (props) => {
     return (
-        <form id="info"
-            name="information"
-            action="/info"
-            method="POST"
-            className="information"
-        >
-            <div>
+            <div className='info'>
                 <h1>About Bookshelf</h1>
                 <p>
                 Bookshelf is an API that helps you keep track of the books you want to read. 
@@ -16,9 +10,10 @@ const Info = (props) => {
                 You can review books once they've been read, and access previously read books easily.
                 </p>
             </div>
-        </form>
     );
 };
+
+
 
 const init = async () => {
     const response = await fetch('/getToken');
