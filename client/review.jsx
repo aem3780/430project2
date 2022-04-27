@@ -97,7 +97,7 @@ const ReviewForm = (props) => {
             </div>
             <div>
                 <label htmlFor="reviewText">Leave a review: </label>
-                <input id="bookReviewText" type="text" name="reviewText" placeholder="Your review..." />
+                <input id="bookReviewText" type="text" name="reviewText" maxLength="250" placeholder="Your review..." />
             </div>
             <input id="_csrf" type="hidden" name="_csrf" value={props.csrf} />
             <input className="makeReviewSubmit" type="submit" value="Publish Review" />
@@ -105,7 +105,7 @@ const ReviewForm = (props) => {
     );
 };
 
-const reviewList = (props) => {
+const ReviewList = (props) => {
     if (props.reviews.length === 0) {
         return (
             <div className="reviewList">
@@ -114,7 +114,7 @@ const reviewList = (props) => {
         );
     }
 
-    const reviewNodes = props.review.map(review => {
+    const reviewNodes = props.reviews.map(review => {
         return (
             <div key={review._id} className="review">
                 <div className="reviewFlex">
@@ -151,6 +151,7 @@ const init = async () => {
     const response = await fetch('/getToken');
     const data = await response.json();
 
+
     ReactDOM.render(
         <ReviewForm csrf={data.csrfToken} />,
         document.getElementById('makeReview')
@@ -160,6 +161,7 @@ const init = async () => {
         <ReviewList reviews={[]} />,
         document.getElementById('reviews')
     );
+
 
     loadReviewsFromServer();
 };

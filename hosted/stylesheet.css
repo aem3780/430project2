@@ -12,7 +12,7 @@ body {
 
 }
 
-#errorMessage {
+#errorMessage, .errorMessage {
     font-size: 1.2em;
     font-weight: bold;
     color: #ca4637;
@@ -45,6 +45,9 @@ img{
 .bookList {
     padding: 20px;
 }
+.reviewList {
+    padding: 20px;
+}
 
 img.bookIcon {
     height: 50px;
@@ -61,16 +64,47 @@ img.bookIcon {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+#reviews {
+    width: 55%;
+    min-width: 500px;
+    border: 2px solid #87c5cc;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.reviewForm {
+    text-align: center;
+    align-items: center;
+    border: 2px solid #87c5cc;
+    width: 100%;
+    margin-top: 0px;
+    background-color: #87c5cc;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+
+}
 
 .bookForm label {
+    display: inline-block;
+    width: auto;
+    margin-left: 15px;
+    font-size: 1.2em;
+    color: white;
+    margin-right: 15px;
+}
+.reviewForm label {
     display: inline-block;
     width: auto;
     margin-left: 10px;
     font-size: 1.2em;
     color: white;
     margin-right: 10px;
-}
-
+} 
 h1,
 h2 {
     display: block;
@@ -102,6 +136,25 @@ h2 {
     font-family: 'Special Elite', cursive;
 }
 
+.makeReviewSubmit {
+    transition: background-color 0.4s ease;
+    border: none;
+    border-radius: 4px;
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    height: 30px;
+    background-color: white;
+    color: #677ab9;
+    text-decoration: none;
+    font-family: 'Special Elite', cursive;
+}
+.makeReviewSubmit:hover {
+    transition: background-color 0.4s ease;
+    color: white;
+    background-color: #677ab9;
+}
+
 .makeBookSubmit:hover {
     transition: background-color 0.4s ease;
     color: white;
@@ -115,7 +168,13 @@ h2 {
     color: white;
     font-family: 'Special Elite', cursive;
 }
-
+.makeReviewSubmit:link,
+.makeReviewSubmit:visited,
+.makeReviewSubmit:hover,
+.makeReviewSubmit:active {
+    color: white;
+    font-family: 'Special Elite', cursive;
+}
 
 .bookForm input,
 select {
@@ -125,7 +184,15 @@ select {
     padding: 5px;
 
 }
+.reviewForm input,
+select {
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: white;
+    padding: 5px;
+    margin: 10px;
 
+}
 nav {
     padding-top: 20px;
     width: 100%;
@@ -252,7 +319,21 @@ nav {
 
 }
 
+.reviewFlex h3 {
+    padding: 10px;
+
+}
+
 .book {
+    width: 95%;
+    margin: 0 auto;
+    background-color: white;
+    height: auto;
+    position: relative;
+    padding: 5px;
+}
+
+.review {
     width: 95%;
     margin: 0 auto;
     background-color: white;

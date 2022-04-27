@@ -24,6 +24,7 @@ const router = (app) => {
   app.post('/review', mid.requiresLogin, controllers.Review.makeReview);
 
   app.get('/', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
+  app.get('*', (req, res) => { res.render('notFound'); });
 };
 
 module.exports = router;
