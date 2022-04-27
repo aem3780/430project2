@@ -118,7 +118,7 @@ const ReviewList = (props) => {
         return (
             <div key={review._id} className="review">
                 <div className="reviewFlex">
-                    <img src="/assets/img/bookicon.png" alt="book icon" className="bookIcon" />
+                    <img src="/assets/img/bookicon2.png" alt="book icon" className="bookIcon2" />
                     <h3 className="bookTitle"> Title: {review.title} </h3>
                     <h3 className="bookAuthor"> Author: {review.author} </h3>
                     <h3 className="bookPages"> Pages: {review.pages} </h3>

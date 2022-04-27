@@ -105,7 +105,7 @@ const BookList = (props) => {
                     <h3 className="bookAuthor"> Author: {book.author} </h3>
                     <h3 className="bookPages"> Pages: {book.pages} </h3>
                     <h3 className="bookGenre"> Genre: {book.genre} </h3>
-                    <a  href="/review" ><input className="finishedBook" type="submit" value="Finished Book" /></a>
+                    <a href="/review" ><input className="finishedBook" type="submit" value="Finished Book" /></a>
                 </div>
             </div>
 

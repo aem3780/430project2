@@ -21,7 +21,9 @@ const makeBook = async (req, res) => {
   try {
     const newBook = new Book(bookData);
     await newBook.save();
-    return res.status(201).json({ title: newBook.title, author: newBook.author, pages: newBook.pages, genre: newBook.genre });
+    return res.status(201).json({
+      title: newBook.title, author: newBook.author, pages: newBook.pages, genre: newBook.genre,
+    });
   } catch (err) {
     console.log(err);
     if (err.code === 11000) {
@@ -30,9 +32,6 @@ const makeBook = async (req, res) => {
     return res.status(400).json({ error: 'An error occured' });
   }
 };
-
-
-
 
 const getBooks = (req, res) => BookModel.findByOwner(req.session.account._id, (err, docs) => {
   if (err) {

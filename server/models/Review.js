@@ -65,7 +65,6 @@ ReviewSchema.statics.findByOwner = (ownerId, callback) => {
   return ReviewModel.find(search).select('title author pages genre rating review').lean().exec(callback);
 };
 
-
 ReviewModel = mongoose.model('Review', ReviewSchema);
 
 module.exports = ReviewModel;
